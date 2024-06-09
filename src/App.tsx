@@ -8,9 +8,7 @@ import { useAudioRecorder } from 'react-audio-voice-recorder';
 async function ask(url: string, audio: Blob, messages: { role: 'user' | 'assistant', content: string }[]) {
   const formData = new FormData();
   formData.append('audio', audio, 'audio.wav');
-  messages.forEach((message, index) => {
-    formData.append(`messages[${index}]`, JSON.stringify(message));
-  })
+  formData.append('messages', JSON.stringify(messages));
   const r = await fetch(`${url}`, {
     method: 'POST',
     body: formData
