@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# AIFriend
 
-Currently, two official plugins are available:
+AIFriend es una inteligencia artificial diseñada para conversar contigo. Puedes hablarle y te responderá con una voz humana, simulando una conversación con un amigo. Este proyecto nace como una solución a la creciente falta de interacción social en un mundo cada vez más digitalizado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Componentes del Proyecto
 
-## Expanding the ESLint configuration
+La parte teórica de este proyecto se encuentra documentada en los siguientes archivos:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `Actualidad de la inteligencia artificial generativa.pdf`
+- `Voz a texto y texto a voz.pdf`
 
-- Configure the top-level `parserOptions` property like this:
+La implementación práctica y el código fuente se encuentran en el notebook de Jupyter:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- `TTS_Y_STT.ipynb`
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Características
+
+- **Conversión de Voz a Texto:** Utiliza el modelo **Whisper** de OpenAI para transcribir tu voz a texto con alta precisión.
+- **Generación de Respuestas:** Emplea un modelo de lenguaje grande (LLM) basado en **Llama** para generar respuestas inteligentes y contextuales.
+- **Conversión de Texto a Voz:** Usa **CoquiTTS** y el modelo **XTTS2** para convertir las respuestas de texto en una voz natural y humana.
+- **Clonación de Voz:** Tiene la capacidad de clonar una voz a partir de una muestra de audio corta, personalizando así la experiencia.
+
+## Autor
+Rolando Andrade
+
+---
+
+Este proyecto es solo con fines educativos.
+
+
